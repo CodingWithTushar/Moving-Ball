@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            height: 500px;
+            width: 600px;
+            background-color: antiquewhite;
+            border: 3px solid black;
+            position: relative;
+        }
+
+        .box {
+            border-radius: 60px;
+            height: 100px;
+            width: 100px;
+            background-color: red;
+
+            position: absolute;
+            /*animation: Tushar 6s cubic-bezier(1, -1.11, 0, 3.64) 1s infinite alternate-reverse ;*/
+           
+           
+            animation: animate1 3s linear infinite, animate2 1s ease-out infinite alternate;
+        }
+
+        /*@keyframes Tushar {
+            from{
+                background-attachment: red;
+            }
+            to{
+                background-color: yellow;
+                transform: translateY(100px);
+            }
+            
+        }*/
+        @keyframes animate1 {
+            from {
+                left: 0;
+            }
+
+            to {
+                left: 100%;
+            }
+        }
+
+        @keyframes animate2 {
+            from {
+                bottom: 0;
+            }
+
+            to {
+                bottom: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="box"></div>
+    </div>
+</body>
+
+</html>
